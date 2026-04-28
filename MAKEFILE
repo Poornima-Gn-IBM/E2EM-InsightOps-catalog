@@ -1,0 +1,13 @@
+REGISTRY=dev-registry-quay-catalogathon-registry.apps.hthon-dev.svl.ibm.com
+ORG=sccat-0364257f-ad4c-40c1-a6de-f10ee3ccc875
+
+build:
+	podman build -t $(REGISTRY)/$(ORG)/e2em-insightops:latest backend/
+	podman build -t $(REGISTRY)/$(ORG)/mock-e2em:latest mock-e2em/
+
+push:
+	podman push --tls-verify=false $(REGISTRY)/$(ORG)/e2em-insightops:latest
+	podman push --tls-verify=false $(REGISTRY)/$(ORG)/mock-e2em:latest
+
+deploy:
+	kubectl apply -k instances-sample/e2em-insightops-test/
