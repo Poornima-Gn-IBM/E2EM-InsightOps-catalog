@@ -16,7 +16,7 @@ spec:
       serviceAccountName: insightops-sa
       containers:
         - name: insightops
-          image: ghcr.io/Poornima-Gn-IBM/e2em-insightops:latest
+          image: dev-registry-quay-catalogathon-registry.apps.hthon-dev.svl.ibm.com/sccat-0364257f-ad4c-40c1-a6de-f10ee3ccc875/e2em-insightops:latest
           ports:
             - containerPort: 8080
           resources:
