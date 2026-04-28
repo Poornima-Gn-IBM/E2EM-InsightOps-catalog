@@ -1,0 +1,12 @@
+resources:
+  - ../../manifests
+
+namespace: {{ namespace }}
+
+configMapGenerator:
+  - name: insightops-config
+    behavior: merge
+    literals:
+      - backend_url={{ e2em_backend_url }}
+      - scan_interval={{ scan_interval }}
+      - enable_ai={{ enable_ai }}

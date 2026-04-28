@@ -1,0 +1,12 @@
+resources:
+  - ../../services/e2em-insightops/latest/template
+
+namespace: demo-insightops
+
+configMapGenerator:
+  - name: insightops-config
+    behavior: merge
+    literals:
+      - backend_url=http://mock-e2em:8080
+      - scan_interval=60
+      - enable_ai=true

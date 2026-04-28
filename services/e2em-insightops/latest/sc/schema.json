@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["namespace", "e2em_backend_url"],
+  "properties": {
+    "namespace": { "type": "string" },
+    "e2em_backend_url": { "type": "string" },
+    "scan_interval": { "type": "string", "default": "60" },
+    "enable_ai": { "type": "boolean", "default": true }
+  }
+}

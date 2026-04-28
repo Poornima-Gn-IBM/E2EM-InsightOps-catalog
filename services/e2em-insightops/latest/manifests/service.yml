@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: e2em-insightops
+spec:
+  selector:
+    app: e2em-insightops
+  ports:
+    - port: 80
+      targetPort: 8080
