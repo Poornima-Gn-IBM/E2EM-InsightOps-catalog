@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mock-e2em
-          image: ghcr.io/Poornima-Gn-IBM/mock-e2em:latest
+          image: dev-registry-quay-catalogathon-registry.apps.hthon-dev.svl.ibm.com/sccat-0364257f-ad4c-40c1-a6de-f10ee3ccc875/mock-e2em:latest
           ports:
             - containerPort: 8080
 ---
